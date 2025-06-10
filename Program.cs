@@ -36,7 +36,7 @@ Console.WriteLine("Valor de b: " + b);
                 Console.WriteLine("Entrada no válida. Debe ingresar un número entero.");
             }*/
 
-
+/* Ejercicio 2 y 3
 int opcion;
 do
 {
@@ -175,4 +175,45 @@ do
     Console.ReadKey();  // Espera que presione una tecla
     Console.Clear();    // Limpia la consola 
 
-} while (true);  // Repetir hasta que se use 'break'
+} while (true);  // Repetir hasta que se use 'break' */
+
+Console.WriteLine("Ingresa una cadena de texto:"); // Muestra un mensaje al usuario
+string cadena = Console.ReadLine(); // Lee la entrada del usuario y la almacena en la variable 'cadena'
+Console.WriteLine("La cadena ingresada es: " + cadena);
+int longitudCadena = cadena.Length;
+Console.WriteLine("Longitud de la cadena: " + longitudCadena);
+/*Console.WriteLine("Ingresa otra cadena de texto:"); // Muestra un mensaje al usuario
+string cadena2 = Console.ReadLine(); 
+string cadenaUnida = string.Concat(cadena, cadena2);
+Console.WriteLine(cadenaUnida);*/
+string subcadena = cadena.Substring(5);
+Console.WriteLine("La subcadena es: " + subcadena);
+
+foreach (var item in cadena)
+{
+    Console.WriteLine($" {item}");
+}
+
+string palabra = "mundo";
+int indice = cadena.IndexOf(cadena, StringComparison.OrdinalIgnoreCase); // Usamos StringComparison.OrdinalIgnoreCase para ignorar mayúsculas y minúsculas
+
+if (indice != -1)
+{
+    Console.WriteLine($"La palabra '{palabra}' se encuentra en el índice: {indice}");
+}
+else
+{
+    Console.WriteLine($"La palabra '{palabra}' no se encuentra en la cadena.");
+}
+
+string mayusculas = cadena.ToUpper();
+string minusculas = cadena.ToLower();
+Console.WriteLine($"{mayusculas}");
+Console.WriteLine($"{minusculas}");
+
+string[] subcadenas = cadena.Split(',');
+
+foreach (string subCadena in subcadenas)
+{
+    Console.WriteLine(subCadena);
+}
